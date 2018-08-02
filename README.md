@@ -2,6 +2,8 @@
 
 Menu? NavigationView? CheckBox? RadioButton? Just Button or TextView? No! It's TextMarkerView.
 
+<img src="https://github.com/Guilherme-HRamos/text_marker_view/blob/master/example.gif"/>
+
 ## Examples
 
 By XML:
