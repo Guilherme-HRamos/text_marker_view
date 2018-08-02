@@ -1,9 +1,29 @@
 # TextMarkerView
 
+[![](https://jitpack.io/v/Guilherme-HRamos/text_marker_view.svg)](https://jitpack.io/#Guilherme-HRamos/text_marker_view)
+
 Menu? NavigationView? CheckBox? RadioButton? Just Button or TextView? No! It's TextMarkerView.
 
 <img src="https://github.com/Guilherme-HRamos/text_marker_view/blob/master/example.gif"/>
 
+## Implementation
+
+Add it in your root build.gradle at the end of repositories:
+
+```
+allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+```
+Add the dependency:
+```
+dependencies {
+	        implementation 'com.github.Guilherme-HRamos:text_marker_view:v1.0'
+	}
+```
 ## Examples
 
 By XML:
