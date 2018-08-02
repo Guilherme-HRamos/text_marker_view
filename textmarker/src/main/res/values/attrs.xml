@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="TextMarkerBase">
+        <attr name="setTitle" format="string" localization="suggested" />
+        <attr name="setTextColor" format="color" />
+        <attr name="setTextSize" format="dimension" />
+        <attr name="setTextAppearence" format="reference" />
+        <attr name="setMarkerColor" format="color" />
+        <attr name="setAnimDuration" format="integer" />
+        <attr name="setEnableAnimation" format="boolean" />
+        <attr name="setChecked" format="boolean" />
+        <attr name="setBackground" format="reference" />
+        <attr name="setTag" format="string" />
+        <attr name="setMarkerElevation" format="dimension" />
+    </declare-styleable>
+
+</resources>

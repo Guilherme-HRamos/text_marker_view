@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:fitsSystemWindows="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <br.vince.textmarker.TextMarker
+            android:id="@+id/welcome_home_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:setAnimDuration="500"
+            app:setBackground="?attr/selectableItemBackgroundBorderless"
+            app:setChecked="true"
+            app:setEnableAnimation="true"
+            app:setMarkerColor="@color/colorAccent"
+            app:setTag="Home"
+            app:setTextAppearence="@style/TextAppearance.MaterialComponents.Headline5"
+            app:setTextColor="#FFFFFF"
+            app:setTitle="Home"/>
+
+        <br.vince.textmarker.TextMarker
+            android:id="@+id/welcome_settings_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:setAnimDuration="500"
+            app:setBackground="?attr/selectableItemBackgroundBorderless"
+            app:setChecked="false"
+            app:setEnableAnimation="true"
+            app:setMarkerColor="@color/colorAccent"
+            app:setTag="Settings"
+            app:setTextAppearence="@style/TextAppearance.MaterialComponents.Headline5"
+            app:setTextColor="#FFFFFF"
+            app:setTitle="Settings"/>
+
+
+        <br.vince.textmarker.TextMarker
+            android:id="@+id/welcome_register_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:setAnimDuration="500"
+            app:setBackground="?attr/selectableItemBackgroundBorderless"
+            app:setChecked="false"
+            app:setEnableAnimation="false"
+            app:setTag="Register"
+            app:setTextAppearence="@style/TextAppearance.MaterialComponents.Headline5"
+            app:setTextColor="#FFFFFF"
+            app:setTitle="Register"/>
+
+        <br.vince.textmarker.TextMarker
+            android:id="@+id/welcome_contact_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:setAnimDuration="500"
+            app:setBackground="?attr/selectableItemBackgroundBorderless"
+            app:setChecked="false"
+            app:setEnableAnimation="false"
+            app:setTag="Call with us"
+            app:setTextAppearence="@style/TextAppearance.MaterialComponents.Headline5"
+            app:setTextColor="#FFFFFF"
+            app:setTitle="FAQ"/>
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <br.vince.textmarker.TextMarker
+                    android:id="@+id/setup_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:setAnimDuration="500"
+                    app:setChecked="false"
+                    app:setEnableAnimation="true"
+                    app:setTextAppearence="@style/TextAppearance.MaterialComponents.Body2"
+                    app:setTextColor="#FFFFFF"
+                    app:setTitle="Button clicked:"/>
+
+                <br.vince.textmarker.TextMarker
+                    android:id="@+id/setup_like_radio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:setAnimDuration="500"
+                    app:setChecked="true"
+                    app:setEnableAnimation="true"
+                    app:setMarkerColor="#FFFFFF"
+                    app:setTextAppearence="@style/TextAppearance.MaterialComponents.Body2"
+                    app:setTextColor="@color/colorAccent"
+                    app:setTitle="Setup like radio button"/>
+
+                <br.vince.textmarker.TextMarker
+                    android:id="@+id/setup_like_checkbox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:setAnimDuration="500"
+                    app:setChecked="false"
+                    app:setEnableAnimation="true"
+                    app:setMarkerColor="#FFFFFF"
+                    app:setTextAppearence="@style/TextAppearance.MaterialComponents.Body2"
+                    app:setTextColor="@color/colorAccent"
+                    app:setTitle="Setup like check box"/>
+
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+
+    </LinearLayout>
+
+
+</FrameLayout>
