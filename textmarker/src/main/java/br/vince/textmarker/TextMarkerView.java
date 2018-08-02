@@ -7,10 +7,10 @@ import android.support.design.card.MaterialCardView;
 import android.support.v7.widget.AppCompatTextView;
 import android.util.AttributeSet;
 
-public final class TextMarker extends TextMarkerBase {
+public final class TextMarkerView extends TextMarkerBase {
 
 
-    public TextMarker(final Context context, @Nullable final AttributeSet attrs) {
+    public TextMarkerView(final Context context, @Nullable final AttributeSet attrs) {
         super(context, attrs);
     }
 
@@ -34,7 +34,7 @@ public final class TextMarker extends TextMarkerBase {
         mClickListenerInterception = listener;
     }
 
-    public void removeClickListenerInterception(OnClickListenerInterception listener) {
+    public void removeClickListenerInterception() {
         mClickListenerInterception = null;
     }
 
@@ -56,6 +56,7 @@ public final class TextMarker extends TextMarkerBase {
 
     public MaterialCardView getMarker() {
         return mMarker;
+
     }
 
     public boolean isChecked() {
@@ -81,7 +82,7 @@ public final class TextMarker extends TextMarkerBase {
     }
 
     public interface OnClickListenerInterception {
-        void onClick(TextMarker view);
+        void onClick(TextMarkerView view);
     }
 
 }

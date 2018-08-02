@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <br.vince.textmarker.TextMarker
+        <br.vince.textmarker.TextMarkerView
             android:id="@+id/welcome_home_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -27,7 +27,7 @@
             app:setTextColor="#FFFFFF"
             app:setTitle="Home"/>
 
-        <br.vince.textmarker.TextMarker
+        <br.vince.textmarker.TextMarkerView
             android:id="@+id/welcome_settings_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -42,7 +42,7 @@
             app:setTitle="Settings"/>
 
 
-        <br.vince.textmarker.TextMarker
+        <br.vince.textmarker.TextMarkerView
             android:id="@+id/welcome_register_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -55,7 +55,7 @@
             app:setTextColor="#FFFFFF"
             app:setTitle="Register"/>
 
-        <br.vince.textmarker.TextMarker
+        <br.vince.textmarker.TextMarkerView
             android:id="@+id/welcome_contact_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -77,7 +77,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <br.vince.textmarker.TextMarker
+                <br.vince.textmarker.TextMarkerView
                     android:id="@+id/setup_info"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -88,7 +88,7 @@
                     app:setTextColor="#FFFFFF"
                     app:setTitle="Button clicked:"/>
 
-                <br.vince.textmarker.TextMarker
+                <br.vince.textmarker.TextMarkerView
                     android:id="@+id/setup_like_radio"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -100,7 +100,7 @@
                     app:setTextColor="@color/colorAccent"
                     app:setTitle="Setup like radio button"/>
 
-                <br.vince.textmarker.TextMarker
+                <br.vince.textmarker.TextMarkerView
                     android:id="@+id/setup_like_checkbox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

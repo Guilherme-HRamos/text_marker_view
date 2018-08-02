@@ -10,46 +10,46 @@ import java.util.List;
 public class TextMarkerGroup {
 
     @NonNull
-    private final List<TextMarker> mGroup;
+    private final List<TextMarkerView> mGroup;
     @NonNull
     private AnimateType mType;
 
-    public TextMarkerGroup(@NonNull AnimateType type, @NonNull List<TextMarker> group) {
+    public TextMarkerGroup(@NonNull AnimateType type, @NonNull List<TextMarkerView> group) {
         mGroup = group;
         mType = type;
 
-        for (TextMarker textMarker : mGroup) {
-            textMarker.setGroup(mGroup);
-            textMarker.setType(type);
+        for (TextMarkerView textMarkerView : mGroup) {
+            textMarkerView.setGroup(mGroup);
+            textMarkerView.setType(type);
         }
     }
 
-    public TextMarkerGroup(@NonNull AnimateType type, @NonNull TextMarker... group) {
+    public TextMarkerGroup(@NonNull AnimateType type, @NonNull TextMarkerView... group) {
         mGroup = new ArrayList<>(Arrays.asList(group));
         mType = type;
 
-        for (TextMarker textMarker : mGroup) {
-            textMarker.setGroup(mGroup);
-            textMarker.setType(type);
+        for (TextMarkerView textMarkerView : mGroup) {
+            textMarkerView.setGroup(mGroup);
+            textMarkerView.setType(type);
         }
     }
 
     public void setType(AnimateType type) {
         mType = type;
-        for (TextMarker textMarker : mGroup) {
-            textMarker.setType(type);
+        for (TextMarkerView textMarkerView : mGroup) {
+            textMarkerView.setType(type);
         }
     }
 
-    public void addItem(TextMarker item) {
+    public void addItem(TextMarkerView item) {
         mGroup.add(item);
         item.setGroup(mGroup);
         item.setType(mType);
     }
 
-    public void removeItem(TextMarker item) {
+    public void removeItem(TextMarkerView item) {
         mGroup.remove(item);
-        item.setGroup(new ArrayList<TextMarker>());
+        item.setGroup(new ArrayList<TextMarkerView>());
     }
 
     public enum AnimateType {

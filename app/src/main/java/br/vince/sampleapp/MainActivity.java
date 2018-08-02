@@ -1,21 +1,23 @@
 package br.vince.sampleapp;
 
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
+import android.support.v7.widget.AppCompatTextView;
+import android.view.animation.OvershootInterpolator;
 
-import br.vince.textmarker.TextMarker;
+import br.vince.textmarker.TextMarkerView;
 import br.vince.textmarker.TextMarkerGroup;
 
 public class MainActivity extends AppCompatActivity {
 
-    private TextMarker mWelcomeMenuButton;
-    private TextMarker mWelcomeSettingsButton;
-    private TextMarker mWelcomeRegisterButton;
-    private TextMarker mWelcomeContactButton;
-    private TextMarker mSetupLikeCheckbox;
-    private TextMarker mSetupLikeRadio;
-    private TextMarker mSetupInfo;
+    private TextMarkerView mWelcomeMenuButton;
+    private TextMarkerView mWelcomeSettingsButton;
+    private TextMarkerView mWelcomeRegisterButton;
+    private TextMarkerView mWelcomeContactButton;
+    private TextMarkerView mSetupLikeCheckbox;
+    private TextMarkerView mSetupLikeRadio;
+    private TextMarkerView mSetupInfo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,45 +43,46 @@ public class MainActivity extends AppCompatActivity {
         new TextMarkerGroup(TextMarkerGroup.AnimateType.RADIOBUTTON,
                 mSetupLikeCheckbox, mSetupLikeRadio);
 
-        mWelcomeMenuButton.setOnClickListenerInterception(new TextMarker.OnClickListenerInterception() {
+        mWelcomeMenuButton.setOnClickListenerInterception(new TextMarkerView.OnClickListenerInterception() {
             @Override
-            public void onClick(final TextMarker view) {
+            public void onClick(final TextMarkerView view) {
                 showMessage("Welcome!");
             }
         });
-        mWelcomeSettingsButton.setOnClickListenerInterception(new TextMarker.OnClickListenerInterception() {
+        mWelcomeSettingsButton.setOnClickListenerInterception(new TextMarkerView.OnClickListenerInterception() {
             @Override
-            public void onClick(final TextMarker view) {
+            public void onClick(final TextMarkerView view) {
                 showMessage("Settings!");
             }
         });
-        mWelcomeRegisterButton.setOnClickListenerInterception(new TextMarker.OnClickListenerInterception() {
+        mWelcomeRegisterButton.setOnClickListenerInterception(new TextMarkerView.OnClickListenerInterception() {
             @Override
-            public void onClick(final TextMarker view) {
+            public void onClick(final TextMarkerView view) {
                 showMessage("Register!");
             }
         });
-        mWelcomeContactButton.setOnClickListenerInterception(new TextMarker.OnClickListenerInterception() {
+        mWelcomeContactButton.setOnClickListenerInterception(new TextMarkerView.OnClickListenerInterception() {
             @Override
-            public void onClick(final TextMarker view) {
+            public void onClick(final TextMarkerView view) {
                 showMessage("Contact!");
             }
         });
 
-        mSetupLikeCheckbox.setOnClickListenerInterception(new TextMarker.OnClickListenerInterception() {
+        mSetupLikeCheckbox.setOnClickListenerInterception(new TextMarkerView.OnClickListenerInterception() {
             @Override
-            public void onClick(final TextMarker view) {
+            public void onClick(final TextMarkerView view) {
                 groupOne.setType(TextMarkerGroup.AnimateType.CHECKBOX);
             }
         });
-        mSetupLikeRadio.setOnClickListenerInterception(new TextMarker.OnClickListenerInterception() {
+        mSetupLikeRadio.setOnClickListenerInterception(new TextMarkerView.OnClickListenerInterception() {
             @Override
-            public void onClick(final TextMarker view) {
+            public void onClick(final TextMarkerView view) {
                 groupOne.setType(TextMarkerGroup.AnimateType.RADIOBUTTON);
             }
         });
-
     }
+
+
 
     protected void showMessage(final String message) {
         mSetupInfo.setText("Button clicked: " + message);

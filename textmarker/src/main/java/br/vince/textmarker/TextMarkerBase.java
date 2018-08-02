@@ -19,8 +19,8 @@ import java.util.List;
 
 class TextMarkerBase extends FrameLayout {
 
-    TextMarker.OnAnimationViewListener mViewListener;
-    TextMarker.OnClickListenerInterception mClickListenerInterception;
+    TextMarkerView.OnAnimationViewListener mViewListener;
+    TextMarkerView.OnClickListenerInterception mClickListenerInterception;
 
     AppCompatTextView mTextView;
     MaterialCardView mMarker;
@@ -34,7 +34,7 @@ class TextMarkerBase extends FrameLayout {
 
     private int markerWidth = 0;
 
-    List<TextMarker> mAnimateGroup = new ArrayList<>();
+    List<TextMarkerView> mAnimateGroup = new ArrayList<>();
     boolean isLikeRadioButton = false;
 
     TextMarkerBase(final Context context, @Nullable final AttributeSet attrs) {
@@ -102,7 +102,7 @@ class TextMarkerBase extends FrameLayout {
                     return;
 
                 if (mClickListenerInterception != null)
-                    mClickListenerInterception.onClick((TextMarker) TextMarkerBase.this);
+                    mClickListenerInterception.onClick((TextMarkerView) TextMarkerBase.this);
                 startAnimation();
             }
         });
@@ -214,7 +214,7 @@ class TextMarkerBase extends FrameLayout {
                 });
     }
 
-    void setGroup(List<TextMarker> items) {
+    void setGroup(List<TextMarkerView> items) {
         mAnimateGroup = items;
     }
 
@@ -231,8 +231,8 @@ class TextMarkerBase extends FrameLayout {
 
                 int enableds = 0;
 
-                for (TextMarker textMarker : mAnimateGroup) {
-                    if (textMarker.isChecked)
+                for (TextMarkerView textMarkerView : mAnimateGroup) {
+                    if (textMarkerView.isChecked)
                         enableds++;
                 }
 
