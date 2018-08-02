@@ -12,7 +12,7 @@ By XML:
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     
-      <br.vince.textmarker.TextMarker
+      <br.vince.textmarker.TextMarkerView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:setAnimDuration="250"
@@ -33,7 +33,7 @@ By JAVA:
 ```
 public class MainActivity extends AppCompatActivity {
 
-  private TextMarker mWelcomeMenuButton;
+  private TextMarkerView mWelcomeMenuButton;
   ...
 
     
@@ -107,7 +107,7 @@ mMarkerText.setAnimDuration(250);
 mMarkerText.setInterpolator(new OvershootInterpolator(4));
 
 //animation status info
-mMarkerText.setOnAnimationListener(new TextMarker.OnAnimationViewListener() {
+mMarkerText.setOnAnimationListener(new TextMarkerView.OnAnimationViewListener() {
             @Override
             public void beforeShow(@Nullable final String tag) {
                 Log.d("MARKER TEXT VIEW","-> before show marker was called. MarkerView: " + tag);
@@ -133,7 +133,7 @@ mMarkerText.setOnAnimationListener(new TextMarker.OnAnimationViewListener() {
 mMarkerText.removeAnimationListener();
 
 //set click intercept
-mMarkerText.setOnClickListenerInterception(new TextMarker.OnClickListenerInterception() {
+mMarkerText.setOnClickListenerInterception(new TextMarkerView.OnClickListenerInterception() {
             @Override
             public void onClick(final TextMarker view) {
                Log.d("MARKER TEXT VIEW","-> MarkerView clicked: " + view.getText());
